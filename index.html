@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dijkstra Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Info</h3>
+      <div id="info-box">Select start and end nodes, then run Dijkstra.</div>
+      <div class="speed-control">
+        <label>Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="60" value="30">
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="top-bar">
+        <button onclick="setMode('addNode')">Add Node</button>
+        <button onclick="setMode('addEdge')">Add Edge</button>
+        <button onclick="setMode('moveNode')">Move Node</button>
+        <button onclick="setMode('pickStart')">Pick Start</button>
+        <button onclick="setMode('pickEnd')">Pick End</button>
+        <button onclick="runDijkstra()">Run Dijkstra</button>
+        <button onclick="resetGraph()">Reset</button>
+      </div>
+      <div id="canvas-container"></div>
+    </div>
+  </div>
+</body>
+</html>
